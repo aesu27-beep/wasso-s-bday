@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Wassila! 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Pacifico&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Fredoka', 'Quicksand', 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #dbeafe 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #1e3a8a;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px 20px;
+      width: 100%;
+      max-width: 420px;
+      min-height: 100vh;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Floating Sparkles Decoration */
+    .sparkle {
+      position: absolute;
+      color: #93c5fd;
+      font-size: 1.2rem;
+      pointer-events: none;
+      animation: float 4s ease-in-out infinite alternate;
+      opacity: 0.7;
+    }
+    .sp1 { top: 10%; left: 12%; animation-delay: 0s; }
+    .sp2 { top: 18%; right: 14%; animation-delay: 1s; font-size: 1.5rem; color: #f472b6; }
+    .sp3 { bottom: 15%; left: 10%; animation-delay: 2s; color: #a7f3d0; }
+    .sp4 { bottom: 20%; right: 12%; animation-delay: 1.5s; }
+
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-12px) rotate(10deg); }
+    }
+
+    /* Page 1: Girly Soft Card */
+    .card-p1 {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      border-radius: 32px;
+      padding: 32px 24px 28px 24px;
+      box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.18),
+                  0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-title {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.3rem;
+      color: #3b82f6;
+      margin-bottom: 2px;
+      text-shadow: 2px 2px 0px #ffffff;
+      font-weight: normal;
+    }
+
+    .sub-title {
+      font-size: 1.1rem;
+      color: #60a5fa;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 22px;
+      background: #eff6ff;
+      padding: 6px 18px;
+      border-radius: 20px;
+      border: 1px dashed #bfdbfe;
+    }
+
+    .pin-display {
+      width: 100%;
+      height: 56px;
+      background: #ffffff;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      letter-spacing: 12px;
+      margin-bottom: 22px;
+      box-shadow: inset 0 2px 6px rgba(147, 197, 253, 0.25), 0 4px 12px rgba(0, 0, 0, 0.03);
+      color: #2563eb;
+      font-weight: 700;
+      border: 2px solid #dbeafe;
+    }
+
+    .keypad {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      width: 100%;
+    }
+
+    .btn {
+      background: #ffffff;
+      border: 1.5px solid #e0f2fe;
+      border-radius: 18px;
+      height: 54px;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #1e40af;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(191, 219, 254, 0.35);
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(147, 197, 253, 0.45);
+      background: #f8fafc;
+    }
+
+    .btn:active {
+      transform: translateY(1px) scale(0.95);
+      box-shadow: 0 2px 5px rgba(147, 197, 253, 0.3);
+      background-color: #f0f9ff;
+    }
+
+    .btn-action {
+      font-size: 0.95rem;
+      background: #f0f9ff;
+      color: #3b82f6;
+      border-color: #bfdbfe;
+      font-weight: 600;
+    }
+
+    .btn-done {
+      grid-column: span 3;
+      margin-top: 8px;
+      height: 52px;
+      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+      color: #ffffff;
+      border: none;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      border-radius: 20px;
+      box-shadow: 0 8px 18px rgba(59, 130, 246, 0.35);
+    }
+
+    .btn-done:hover {
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    }
+
+    .error-msg {
+      color: #f43f5e;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 14px;
+      height: 20px;
+    }
+
+    /* Page 2 Styles */
+    .title-bold {
+      font-size: 1.85rem;
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 50px;
+      color: #1e3a8a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      max-width: 360px;
+    }
+
+    .cake-container {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Fixed Vintage Cake Structure */
+    .cake {
+      width: 220px;
+      height: 150px;
+      position: relative;
+    }
+
+    .plate {
+      width: 260px;
+      height: 16px;
+      background: #ffffff;
+      border-radius: 20px;
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.06);
+      border: 2px solid #e2e8f0;
+      z-index: 1;
+    }
+
+    .cake-base {
+      position: absolute;
+      width: 210px;
+      height: 95px;
+      bottom: 16px;
+      left: 5px;
+      background: #fce7f3;
+      border-radius: 12px 12px 8px 8px;
+      box-shadow: inset 0 -22px 0 #f472b6;
+      border: 3px solid #ffffff;
+      border-bottom: none;
+      z-index: 2;
+    }
+
+    .piping-top-container {
+      position: absolute;
+      top: 33px;
+      left: 5px;
+      width: 210px;
+      height: 16px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 4;
+      padding: 0 2px;
+    }
+
+    .top-swirl {
+      width: 22px;
+      height: 16px;
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(244, 114, 182, 0.25);
+    }
+
+    .piping-bottom {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 14px;
+      display: flex;
+      justify-content: space-around;
+      z-index: 3;
+    }
+
+    .shell {
+      width: 18px;
+      height: 14px;
+      background: #ffffff;
+      border-radius: 50% 50% 0 0;
+      box-shadow: 0 -2px 4px rgba(244, 114, 182, 0.2);
+    }
+
+    .frosting-drips {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 25px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 3;
+    }
+
+    .drip {
+      width: 20px;
+      height: 22px;
+      background: #ffffff;
+      border-radius: 0 0 10px 10px;
+    }
+    .drip:nth-child(even) { height: 15px; }
+
+    .heart-decor {
+      position: absolute;
+      top: 36px;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      color: #ec4899;
+      font-size: 0.85rem;
+      z-index: 3;
+    }
+
+    .candles-group {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 14px;
+      z-index: 5;
+    }
+
+    .candle-digit {
+      position: relative;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #f59e0b;
+      font-family: 'Fredoka', cursive;
+      text-shadow: 2px 2px 0px #ffffff, 0 0 12px rgba(245, 158, 11, 0.4);
+      line-height: 1;
+    }
+
+    .flame {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 11px;
+      height: 17px;
+      background: #f97316;
+      border-radius: 50% 50% 20% 20%;
+      box-shadow: 0 0 8px #f97316, 0 0 16px #facc15;
+      animation: flicker 0.6s infinite alternate ease-in-out;
+    }
+
+    @keyframes flicker {
+      0% { transform: translateX(-50%) scale(0.95) rotate(-2deg); }
+      100% { transform: translateX(-50%) scale(1.15) rotate(2deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Sparkles -->
+  <div class="sparkle sp1">✨</div>
+  <div class="sparkle sp2">💖</div>
+  <div class="sparkle sp3">🎀</div>
+  <div class="sparkle sp4">✨</div>
+
+  <!-- PAGE 1: PIN ENTRY -->
+  <div id="page1" class="page">
+    <div class="card-p1">
+      <h1 class="main-title">Happy Birthday</h1>
+      <div class="sub-title">enter ur bday 🎂</div>
+      
+      <div id="display" class="pin-display">____</div>
+      
+      <div class="keypad">
+        <button class="btn" onclick="pressNum('1')">1</button>
+        <button class="btn" onclick="pressNum('2')">2</button>
+        <button class="btn" onclick="pressNum('3')">3</button>
+        <button class="btn" onclick="pressNum('4')">4</button>
+        <button class="btn" onclick="pressNum('5')">5</button>
+        <button class="btn" onclick="pressNum('6')">6</button>
+        <button class="btn" onclick="pressNum('7')">7</button>
+        <button class="btn" onclick="pressNum('8')">8</button>
+        <button class="btn" onclick="pressNum('9')">9</button>
+        <button class="btn btn-action" onclick="pressDelete()">Delete</button>
+        <button class="btn" onclick="pressNum('0')">0</button>
+        <button class="btn btn-action" onclick="pressErase()">Erase</button>
+        <button class="btn btn-done" onclick="submitPin()">Done ✨</button>
+      </div>
+      
+      <div id="errorMsg" class="error-msg"></div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: CELEBRATION -->
+  <div id="page2" class="page hidden">
+    <h1 class="title-bold">HAPPY BIRTHDAY WASSILA!<br>LUCKY TO HAVE YOU AS A BSF</h1>
+    
+    <div class="cake-container">
+      <div class="cake">
+        <!-- Candle Numbers with flame -->
+        <div class="candles-group">
+          <div class="candle-digit">
+            <div class="flame"></div>
+            2
+          </div>
+          <div class="candle-digit">
+            <div class="flame"></div>
+            1
+          </div>
+        </div>
+
+        <!-- Top Piping Swirls Rim -->
+        <div class="piping-top-container">
+          <div class="top-swirl"></div>
+          <div class="top-swirl"></div>
+          <div class="top-swirl"></div>
+          <div class="top-swirl"></div>
+          <div class="top-swirl"></div>
+          <div class="top-swirl"></div>
+          <div class="top-swirl"></div>
+          <div class="top-swirl"></div>
+          <div class="top-swirl"></div>
+          <div class="top-swirl"></div>
+        </div>
+
+        <!-- Main Vintage Cake Base -->
+        <div class="cake-base">
+          <div class="frosting-drips">
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+            <div class="drip"></div>
+          </div>
+          <div class="heart-decor">
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+          </div>
+          <div class="piping-bottom">
+            <div class="shell"></div>
+            <div class="shell"></div>
+            <div class="shell"></div>
+            <div class="shell"></div>
+            <div class="shell"></div>
+            <div class="shell"></div>
+            <div class="shell"></div>
+            <div class="shell"></div>
+            <div class="shell"></div>
+          </div>
+        </div>
+
+        <!-- Cake Plate -->
+        <div class="plate"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentInput = "";
+    const correctPin = "0910";
+
+    function updateDisplay() {
+      const display = document.getElementById("display");
+      let formatted = currentInput;
+      while (formatted.length < 4) {
+        formatted += "_";
+      }
+      display.textContent = formatted;
+    }
+
+    function pressNum(num) {
+      if (currentInput.length < 4) {
+        currentInput += num;
+        updateDisplay();
+      }
+    }
+
+    function pressDelete() {
+      currentInput = currentInput.slice(0, -1);
+      updateDisplay();
+    }
+
+    function pressErase() {
+      currentInput = "";
+      updateDisplay();
+    }
+
+    function submitPin() {
+      if (currentInput === correctPin) {
+        document.getElementById("page1").classList.add("hidden");
+        document.getElementById("page2").classList.remove("hidden");
+      } else {
+        const errorDiv = document.getElementById("errorMsg");
+        errorDiv.textContent = "wrong passcode, try again! 💖";
+        setTimeout(() => {
+          errorDiv.textContent = "";
+        }, 2200);
+      }
+    }
+  </script>
+</body>
+</html>
